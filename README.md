@@ -1,16 +1,14 @@
 # AgroShield
-
-ESP32-CAM based smart farm surveillance node with multi-sensor fusion.
+### Smart Farm Surveillance Node with Intruder Alert & Deterrence System
 
 ## Features
-- ESP32-CAM video streaming (AI-Thinker module)
+- ESP32-CAM video streaming (AI module)
 - PIR motion detection
 - Laser-LDR tripwire
 - Ultrasonic distance sensing
 - Sound sensor
-- GSM/SIM800 alert notifications
+- GSM/SIM800L alert notifications
 - Solar power harvesting
-- LoRa communication
 
 ## Files
 - `CameraWebServer.ino` — main sketch
@@ -30,4 +28,4 @@ AI-Thinker ESP32-CAM module (PSRAM required).
 5. Flash and open the serial monitor for the device IP.
 
 ## License
-MIT
+
