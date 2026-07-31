@@ -1,10 +1,10 @@
-# AgroShield
-Smart farm surveillance node with intruder alert & deterrence
+# AgroShield 🛡️
+### Smart Farm Surveillance Node with Intruder Alert & Deterrence
 
-## Overview
+### Overview
 AgroShield is a modular ESP32-CAM-based surveillance node designed for remote farms and gardens. It streams camera video, detects motion and tripwire events, measures distance, and sends alerts via GSM (SIM800L). The project supports solar powering for off-grid deployments.
 
-## Features
+### Features
 - ESP32-CAM video streaming (AI module compatible)
 - PIR motion detection
 - Laser + LDR tripwire
@@ -13,7 +13,7 @@ AgroShield is a modular ESP32-CAM-based surveillance node designed for remote fa
 - GSM/SIM800L alert notifications (SMS / data)
 - Solar power harvesting + battery management guidance
 
-## Repository layout
+### Repository layout
 - `CameraWebServer.ino` — main Arduino sketch and configuration
 - `app_httpd.cpp` — HTTP server / streaming implementation
 - `camera_index.h` — web UI assets (HTML/CSS/JS embedded)
@@ -21,7 +21,7 @@ AgroShield is a modular ESP32-CAM-based surveillance node designed for remote fa
 - `camera_pins.h` — pin mappings per board
 - `images/` — place module photos and wiring images here
 
-## Hardware (recommended)
+### Hardware (recommended)
 - AI-Thinker ESP32-CAM (with PSRAM recommended for stable streaming)
 - SIM800L GSM module (with 4V regulated power and appropriate antenna)
 - PIR sensor (HC-SR501 or similar)
@@ -31,7 +31,7 @@ AgroShield is a modular ESP32-CAM-based surveillance node designed for remote fa
 - LiPo battery (3.7V) + TP4056 charger or solar charge controller (e.g., TP4056 + boost/regulator)
 - Solar panel sized per battery + load (example: 6V 5–10W for small setups)
 
-## Wiring & pinout (example for AI-Thinker ESP32-CAM)
+### Wiring & pinout (example for AI-Thinker ESP32-CAM)
 - Camera: use the board's built-in camera connector (no external wiring).
 - PIR sensor: VCC = 5V (or 3.3V if module supports), GND = GND, OUT -> GPIO 13 (configurable in `board_config.h`)
 - Laser diode: VCC = 5V, GND = GND, signal (if present) -> unused or direct power
@@ -42,16 +42,15 @@ AgroShield is a modular ESP32-CAM-based surveillance node designed for remote fa
 
 Note: Exact pins are configurable in `camera_pins.h` and `board_config.h`. Verify your board variant and change pin macros before flashing.
 
-## Images
+### Node Images (Concept)
 
-![AgroShield block diagram]<img width="546" height="509" alt="blockdiagram" src="https://github.com/user-attachments/assets/f8d2e0ef-60c6-41ee-9202-ee89934c923d" />
+<img width="208" height="300" alt="node1" src="https://github.com/user-attachments/assets/6901f69d-2505-4f14-bf42-1b93aacb1728" />
 
-![AgroShield node front view]<img width="476" height="679" alt="node1" src="https://github.com/user-attachments/assets/6901f69d-2505-4f14-bf42-1b93aacb1728" />
+<img width="208" height="300" alt="node2" src="https://github.com/user-attachments/assets/9d062b1f-8187-46cc-ac38-44e170f5c25a" />
 
 
-When adding photos, optimize them for web (resize to ≤1600px, compress) and include alt text.
 
-## Software / Setup
+### Software / Setup
 1. Install Arduino IDE (or PlatformIO) and add ESP32 board support:
    - In Arduino IDE: File > Preferences > Additional Boards Manager URLs add https://raw.githubusercontent.com/espressif/arduino-esp32/gh-pages/package_esp32_index.json
    - Boards Manager: install "esp32 by Espressif Systems"
@@ -65,10 +64,10 @@ When adding photos, optimize them for web (resize to ≤1600px, compress) and in
 7. Connect a USB-to-Serial adapter for flashing (GPIO0 to GND to enter flash mode on some boards).
 8. Upload and open Serial Monitor at 115200 baud. The device will print its IP address when connected.
 
-## SIM800L notes & power
+### SIM800L notes & power
 - SIM800L requires a stable 4.0V supply capable of up to 2A peak current. Use a LiPo with a proper regulator or a dedicated SIM power supply.
 - Add decoupling capacitors and avoid powering SIM800L from the same noisy 5V source without filtering.
 - If using SMS alerts: ensure your SIM card has SMS enabled and disable PIN or set PIN in code.
 
-## Web UI
+### Web UI
 - Visit http://<device-ip> in a browser on the same network.
