@@ -43,12 +43,11 @@ AgroShield is a modular ESP32-CAM-based surveillance node designed for remote fa
 Note: Exact pins are configurable in `camera_pins.h` and `board_config.h`. Verify your board variant and change pin macros before flashing.
 
 ## Images
-Add images to the `images/` directory in the repository (recommended names):
-- `images/block-diagram.jpg` — block diagram of system
-- `images/node-front.jpg` — close-up / front photo of the node
 
-![AgroShield block diagram](images/block-diagram.jpg)
-![AgroShield node front view](images/node-front.jpg)
+![AgroShield block diagram]<img width="546" height="509" alt="blockdiagram" src="https://github.com/user-attachments/assets/f8d2e0ef-60c6-41ee-9202-ee89934c923d" />
+
+![AgroShield node front view]<img width="476" height="679" alt="node1" src="https://github.com/user-attachments/assets/6901f69d-2505-4f14-bf42-1b93aacb1728" />
+
 
 When adding photos, optimize them for web (resize to ≤1600px, compress) and include alt text.
 
